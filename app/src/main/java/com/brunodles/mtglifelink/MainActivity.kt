@@ -11,7 +11,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onStart() {
-        supportFragmentManager.findFragmentById(R.id.player1).arguments = LifeCounterFragment.buildArgs(180)
+        supportFragmentManager.findFragmentById(R.id.player1).arguments = LifeCounterFragment.buildArgs(180, 1)
+        supportFragmentManager.findFragmentById(R.id.player2).arguments = LifeCounterFragment.buildArgs(player = 2)
         super.onStart()
     }
 }
